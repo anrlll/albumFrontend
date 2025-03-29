@@ -7,7 +7,7 @@ export default function Home() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get("/api") // Next.js の API を経由
+    axios.get("/api") // Next.js の API を経由させる
       .then((response) => setMessage(response.data.message))
       .catch((error) => console.error("API fetch error:", error));
   }, []);
